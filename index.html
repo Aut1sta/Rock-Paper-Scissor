@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
-    <script src='js/script.js'></script>
+
+    <header>
+        <h1>Rock Paper and Scissor</h1>
+    </header>
+
+    <div id="score">
+        <h1 id="scoreResults">Score</h1>
+        <p id="playerScore">Player Score: 0</p>
+        <p id="computerScore">Computer Score: 0</p>
+    </div>
 
     <main>
-        <p class="result"></p>
-
         <div class="buttons">
-            <button class="rockBtn" onclick="playerSelection = 'ROCK'">Rock</button>
-            <button class="paperBtn" onclick="playerSelection = 'PAPER'">Paper</button>
-            <button class="scissorBtn" onclick="playerSelection = 'SCISSOR'">Scissor</button>
+            <button id="rockBtn" onclick="playerSelection = 'ROCK', playRound(playerSelection, computerSelection)"><i class="far fa-hand-rock"></i></button>
+            <button id="paperBtn" onclick="playerSelection = 'PAPER', playRound(playerSelection, computerSelection)"><i class="far fa-hand-paper"></i></button>
+            <button id="scissorBtn" onclick="playerSelection = 'SCISSOR', playRound(playerSelection, computerSelection)"><i class="far fa-hand-scissors"></i></button>
+            <button id="restartBtn" onclick="restartGame()">Restar Game</button>
         </div>
     </main>   
+
+    <script src='js/script.js'></script>
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js"  crossorigin="anonymous" ></script>
 </body>
 </html>
